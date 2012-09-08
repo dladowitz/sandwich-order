@@ -6,7 +6,14 @@ describe Order do
   end
   
   it { @order.save.should be true }
-  it { @order.description.should_not be nil }
-  it { @order.ordered_by.should_not be nil }
-  it { @order.should be_an_instance_of Order}
+  it { should validate_presence_of(:description) }
+  it { should validate_presence_of(:ordered_by) }
+  it { should respond_to(:description) }
+  it { should respond_to(:ordered_by) }
+  it { should be_an_instance_of Order}
+  
+  it "should be able to send en email notification" do
+    @order.send_email should be true
+  end
+  
 end

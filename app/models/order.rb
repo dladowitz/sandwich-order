@@ -1,5 +1,7 @@
 class Order < ActiveRecord::Base
   attr_accessible :description, :ordered_by
+  validates_presence_of  :description, :ordered_by
+  after_create :send_email
   
   def send_email
         puts "email sent to david!"
