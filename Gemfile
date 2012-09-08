@@ -5,9 +5,12 @@ gem 'rest-client'
 
 
 
+
 group :development do
   gem 'quiet_assets'
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'simplecov'
 end
 
 
