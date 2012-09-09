@@ -1,4 +1,7 @@
 Sandwich::Application.configure do
+  ###### Added after installing Devise ########
+  config.action_mailer.default_url_options = { :host => 'http://sandwich-maker.herokuapp.com' }
+  
   # Settings specified here will take precedence over those in config/application.rb
   
   #### From Devise #####
