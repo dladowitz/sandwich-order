@@ -1,4 +1,6 @@
 Sandwich::Application.routes.draw do
+  match '/auth/:provider/callback', to: 'sessions#create'
+
   resources :creditcards
 
   resources :orders
