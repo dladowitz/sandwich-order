@@ -46,7 +46,9 @@ class OrdersController < ApplicationController
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render json: @order, status: :created, location: @order }
+        # @order.send_email(@order.ordered_by, @order.description)
       else
+        flash.now[:error] = "C'mon now. We pinkie swear not to sell your name to anyone" # Not quite right!
         format.html { render action: "new" }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

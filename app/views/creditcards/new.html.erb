@@ -1,0 +1,38 @@
+
+
+<div>This service ain't free. Fred needs to get paid so he can feed the Fredlings. 
+	But here's the deal. We are gonna give you a gift card with $300 credit on it. Use it to sign up and you should be good for a while. </div>
+<br />
+<br />
+	
+<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+<form action="/creditcards" method="post" id="payment-form">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+
+  <div class="form-row">
+
+    <label>Card Number</label>
+    <input type="text" size="20" autocomplete="off" class="card-number" id="card-number" value="4242424242424242"/>
+  </div>
+
+  <div class="form-row">
+    <label>CVC</label>
+    <input type="text" size="4" autocomplete="off" class="card-cvc" id="card-cvc" value="123"/>
+  </div>
+
+  <div class="form-row">
+    <label>Expiration (MM/YYYY)</label>
+    <input type="text" size="2" class="card-expiry-month" id="card-expiry-month" value="11"/>
+    <span> / </span>
+    <input type="text" size="4" class="card-expiry-year" id="card-expiry-year" value="2016"/>
+  </div>
+
+
+  <button type="submit" class="submit-button btn btn-success">Save Credit Card</button>
+
+</form>
+
+<%= image_tag "gift-card.png" %>
+
+
+

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: cdde220990ded7a09f5ec0f426952286ee67af16
+  specs:
+    stripe (1.7.2)
+      multi_json (~> 1.1)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -158,5 +166,6 @@ DEPENDENCIES
   shoulda
   simplecov
   sqlite3
+  stripe!
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

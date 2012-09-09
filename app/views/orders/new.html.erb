@@ -1,5 +1,9 @@
-<h1>New order</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', orders_path %>
+<%- model_class = Order -%>
+<div class="page-header">
+  <h3>Sounds like you're hungry. <br />
+	Well you've come to the right place</h3>
+	<div>
+		Put in an order and we'll get it to you just as soon as Fred feels like it. 
+	</div>
+</div>
+<%= render :partial => 'form' %>

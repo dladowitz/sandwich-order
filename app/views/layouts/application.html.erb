@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sandwich</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Sandwich</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+		<meta name="viewport" content="width=depth-width, initial-scale=1.0">
+	</head>
+	<body>
+	
+		<div class="navbar navbar-fixed-top">
 
-<%= yield %>
 
-</body>
+		  <div class="navbar-inner">
+		    <div class="container">
+		      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </a>
+
+		      <a class="brand" href="<%=orders_path%>"><b>Fred's Famous Sandwiches</b></a>
+
+		      <ul class="nav pull-right nav-collapse">
+		    
+		        <li><%= link_to "New Order", new_order_path %></li>
+		        <li><%= link_to "Past Orders", orders_path %></li>
+		        <li><%= link_to "Sign in", '#' %></li>
+		        <li><%= link_to "Sign Out", '#'   %></li>
+	
+		      </ul>
+
+		    </div><!--/.container -->
+		  </div>
+		</div>
+	
+	
+	
+		<div class ="container">
+			<div class="row">
+					<div class="span9">
+				  <% flash.each do |key, value| %>
+		        <div class="alert alert-<%= key %>"><%= value %></div>
+		      <% end %>
+					<%= yield %></div>
+					<div class="span3">
+						<h3>About Us</h3>
+						We've been providing high quality sandwiches to hungry coders since, um, err, since sometime before today.
+						<br /> 
+						<br />
+						<div> <img src="http://24.media.tumblr.com/tumblr_m6pmncJtKc1rqht26o1_500.jpg"></div>
+					</div>
+			</div>
+		</div>
+		 <%= debug(params) if Rails.env.development? %>
+	</body>
 </html>

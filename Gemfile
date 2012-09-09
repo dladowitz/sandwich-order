@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 gem 'rest-client'
 gem "shoulda"
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
 

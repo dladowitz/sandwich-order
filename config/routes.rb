@@ -1,5 +1,9 @@
 Sandwich::Application.routes.draw do
+  resources :creditcards
+
   resources :orders
+   root :to => 'orders#new'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

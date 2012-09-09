@@ -1,25 +1,20 @@
-<%= form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @order, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :'Sandwich Type', :class => 'control-label' %>
+    <div class="controls">
+     <%= f.select :description, [['BLT','BLT'],['PBJ & Bacon','PBJ & Bacon'],['Mexican (yeah we dont know what kind that is either)','Mexican']] %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :ordered_by, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ordered_by, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :"Choose a sandwich" %><br />
-		<%= f.select :description, [['BLT','BLT'],['PBJ & Bacon','PBJ & Bacon'],['Mexican (yeah we dont know what kind that is ether)','Mexican']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ordered_by %><br />
-    <%= f.text_field :ordered_by %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                orders_path, :class => 'btn' %>
   </div>
 <% end %>
