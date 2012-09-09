@@ -11,14 +11,10 @@ end
 
 module Sandwich
   class Application < Rails::Application
-<<<<<<< HEAD
-    
-    ##### From Devise ######
-    config.assets.initialize_on_precompile = false
-=======
+
     ###### From Devise install instructions ###########
      config.assets.initialize_on_precompile = false
->>>>>>> 908730b9a2d99167b27d42383d3853c075dcf094
+
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
