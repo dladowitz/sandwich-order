@@ -6,8 +6,9 @@ Sandwich::Application.routes.draw do
   resources :creditcards
 
   resources :orders
-   root :to => 'orders#new'
   
+  # root :to => 'orders#new'
+  root :to => "static_pages#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

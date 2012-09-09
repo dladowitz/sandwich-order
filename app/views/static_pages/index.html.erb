@@ -1,0 +1,24 @@
+<div class="span12" style="text-align:center; padding-bottom:30px">
+  <h1> Hey, Welcome to Fred's Famous Sanwiches </h1><br />
+  <div style="font-size:20px; line-height:30px">
+    <h1>Here is how it works</h1>
+    <i class="icon-fire icon-large"></i>
+    <h2>Sign up for an account.</h2>
+    <i class=" icon-user icon-large"></i>
+    <h2>Order a sandwich.</h2>
+    <i class=" icon-thumbs-up icon-large"></i>
+		<p>yeah, we thought it was simple too. </p>
+  </div>
+
+  <br />
+
+  <div>
+    <% if current_user %>
+      <%= button_to "GET STARTED NOW!", new_order_path, :method => "get", :class => "btn btn-large btn-success"%>
+    <% else %>
+      <%= button_to "GET STARTED NOW!", new_user_registration_path, :method => "get", :class => "btn btn-large btn-success"%>
+    <% end %>
+  </div>
+</div>
+
+

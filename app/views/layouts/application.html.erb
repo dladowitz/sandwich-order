@@ -21,11 +21,8 @@
 		      <ul class="nav pull-right nav-collapse">	    
 		        <li><%= link_to "New Order", new_order_path %></li>
 		        <li><%= link_to "Past Orders", orders_path %></li>
-		        <li><%= link_to "Sign in", '#' %></li>
-
+		        <li><%= link_to "Sign in", new_user_session_path %></li>
 		        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete   %></li>
-		        <li><%= link_to "Sign Out", '#'   %></li>
-
 		      </ul>
 
 		    </div><!--/.container -->
@@ -38,6 +35,8 @@
 		        <div class="alert alert-<%= key %>"><%= value %></div>
 		      <% end %>
 					<%= yield %></div>
+					
+				<% if current_page? orders_path %>
 					<div class="span3">
 						<h3>About Us</h3>
 						We've been providing high quality sandwiches to hungry coders since, um, err, since sometime before today.
@@ -45,6 +44,16 @@
 						<br />
 						<div> <img src="http://24.media.tumblr.com/tumblr_m6pmncJtKc1rqht26o1_500.jpg"></div>
 					</div>
+				<% elsif current_page? new_order_path%>
+					<div class="span3">
+						<h3>About Us</h3>
+						We've been providing high quality sandwiches to hungry coders since, um, err, since sometime before today.
+						<br /> 
+						<br />
+						<div> <img src="http://24.media.tumblr.com/tumblr_m6pmncJtKc1rqht26o1_500.jpg"></div>
+					</div>
+					<% end %>
+
 			</div>
 		</div>
 		 <%= debug(params) if Rails.env.development? %>
