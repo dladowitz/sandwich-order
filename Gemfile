@@ -7,11 +7,6 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'omniauth-taskrabbit'
 gem 'taskrabbit'
 gem 'devise'
-<<<<<<< HEAD
-
-=======
->>>>>>> 908730b9a2d99167b27d42383d3853c075dcf094
-
 
 
 group :development do
