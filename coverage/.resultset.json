@@ -1,0 +1,35 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/David/Dropbox/DevBootcamp/general_things/sandwich/spec/views/creditcards/create.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/David/Dropbox/DevBootcamp/general_things/sandwich/spec/views/creditcards/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/David/Dropbox/DevBootcamp/general_things/sandwich/spec/views/creditcards/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/David/Dropbox/DevBootcamp/general_things/sandwich/spec/views/sessions/create.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1347203018
+  }
+}

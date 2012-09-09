@@ -10,8 +10,6 @@
 	<body>
 	
 		<div class="navbar navbar-fixed-top">
-
-
 		  <div class="navbar-inner">
 		    <div class="container">
 		      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -19,24 +17,17 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </a>
-
 		      <a class="brand" href="<%=orders_path%>"><b>Fred's Famous Sandwiches</b></a>
-
-		      <ul class="nav pull-right nav-collapse">
-		    
+		      <ul class="nav pull-right nav-collapse">	    
 		        <li><%= link_to "New Order", new_order_path %></li>
 		        <li><%= link_to "Past Orders", orders_path %></li>
 		        <li><%= link_to "Sign in", '#' %></li>
 		        <li><%= link_to "Sign Out", '#'   %></li>
-	
 		      </ul>
 
 		    </div><!--/.container -->
 		  </div>
 		</div>
-	
-	
-	
 		<div class ="container">
 			<div class="row">
 					<div class="span9">
