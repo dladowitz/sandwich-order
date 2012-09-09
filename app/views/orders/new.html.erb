@@ -1,3 +1,5 @@
+
+	
 <%- model_class = Order -%>
 <div class="page-header">
   <h3>Sounds like you're hungry. <br />
@@ -5,8 +7,14 @@
 	<div>
 		Put in an order and we'll get it to you just as soon as Fred feels like it. 
 	</div>
+	<div>
+		<br />
+		<h4> All Sandwich's are $5.99. </h4> Unless your name is <u><%= link_to "Norm", "http://www.davidstuff.com/humor/norm.htm" %></u>, we don't take credit 
+	</div>
+			
 </div>
 
 <%= render :partial => 'form' %>
+
 
 

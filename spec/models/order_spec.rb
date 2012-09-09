@@ -9,9 +9,9 @@ describe Order do
   
   it { @order.save.should be true }
   it { should validate_presence_of(:description) }
-  it { should validate_presence_of(:ordered_by) }
+  it { should validate_presence_of(:ordered_for) }
   it { should respond_to(:description) }
-  it { should respond_to(:ordered_by) }
+  it { should respond_to(:ordered_for) }
   it { should be_an_instance_of Order}
   
   it "should be able to send en email notification" do

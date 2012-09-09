@@ -1,8 +1,9 @@
 <%- model_class = Order -%>
 <div class="page-header">
-  <h4>Hey man, thanks for the order. <br />
+  <h4>Hey man, thanks for the order.<br />
 	That's pretty rad of you to trust us with your sandwich needs. <br />
 	We, like, appreciate it.</h4>
+	We charged you $5.99 and you'll like get a receipt soon if the internets are working today. 
 </div>
 
 <div>Here is what you ordered. If it's wrong you can make it right. <br />
@@ -12,11 +13,11 @@
   <dt><strong>Sandwich Type:</strong></dt>
   <dd><%= @order.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:ordered_by) %>:</strong></dt>
-  <dd><%= @order.ordered_by %></dd>
+  <dd><%= @order.ordered_for %></dd>
 </dl>
 
 <div class="form-actions">
-  <%= link_to 'All Orders',
+  <%= link_to 'View All Orders',
               orders_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_order_path(@order), :class => 'btn' %>

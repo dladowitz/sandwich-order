@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909153136) do
+ActiveRecord::Schema.define(:version => 20120909170106) do
 
   create_table "orders", :force => true do |t|
     t.string   "description"
-    t.string   "ordered_by"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.string   "ordered_for"
   end
 
   create_table "users", :force => true do |t|

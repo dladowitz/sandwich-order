@@ -18,11 +18,18 @@
 		        <span class="icon-bar"></span>
 		      </a>
 		      <a class="brand" href="<%=orders_path%>"><b>Fred's Famous Sandwiches</b></a>
-		      <ul class="nav pull-right nav-collapse">	    
+		      <ul class="nav pull-right nav-collapse">	
+			    <% if current_user %>
+						<li><%= link_to "New Order", new_order_path %></li>
+		        <li><%= link_to "Past Orders", orders_path %></li>
+		        <li><%= link_to current_user.email, edit_user_registration_path %></li>
+		        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete   %></li>
+						
+					<% else %>
 		        <li><%= link_to "New Order", new_order_path %></li>
 		        <li><%= link_to "Past Orders", orders_path %></li>
 		        <li><%= link_to "Sign in", new_user_session_path %></li>
-		        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete   %></li>
+					<% end %>
 		      </ul>
 
 		    </div><!--/.container -->
