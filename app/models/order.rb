@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
   attr_accessible :description, :ordered_by
   validates_presence_of  :description, :ordered_by
-  # after_create :send_email
+  belongs_to :user
   
   def send_email(ordered_by, sandwich_type)
         puts "email sent to david!"

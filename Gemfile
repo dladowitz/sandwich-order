@@ -6,6 +6,8 @@ gem "shoulda"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'omniauth-taskrabbit'
 gem 'taskrabbit'
+gem 'devise'
+
 
 
 
