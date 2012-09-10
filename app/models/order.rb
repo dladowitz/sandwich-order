@@ -21,14 +21,14 @@ Thanks for supporting them.")
     pamfaxr = PamFaxr.new :username => 'david@ladowitz.com', :password => 'L@dowitz12'
     pamfaxr.create_fax_job
     
-    # case sandwich
-    # when "BALT"
-    #  ppamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Balt.pdf')
-    # when "Tomcat"
+    case sandwich
+    when "BALT"
+     ppamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Balt.pdf')
+    when "Tomcat"
       pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Tomcat.pdf')
-    # else
-    #    pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Caprese.pdf')
-    #  end
+    else
+       pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Caprese.pdf')
+    end
     
     pamfaxr.add_recipient('+17605613451')
     loop do
