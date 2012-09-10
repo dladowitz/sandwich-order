@@ -4,9 +4,14 @@ gem 'rails', '3.2.7'
 gem 'rest-client'
 gem "shoulda"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-gem 'omniauth-taskrabbit'
-gem 'taskrabbit'
+gem 'omniauth-taskrabbit' #for Task Rabbit API
+gem 'taskrabbit' # for posting sandwich orders to task rabbit
 gem 'devise'
+gem 'ordrin' # for posting orders to ordr.in
+gem 'ordr.in-cli' 
+gem 'pamfaxr' # for faxing to Waiters on Wheels
+gem 'json'
+gem  'mime-types'
 
 
 group :development do

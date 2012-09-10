@@ -103,7 +103,13 @@ GEM
       omniauth (~> 1.0)
     omniauth-taskrabbit (0.0.1)
       omniauth-oauth2 (~> 1.0.2)
+    ordr.in-cli (0.2)
+    ordrin (0.1.1)
+      json (>= 1.7.3)
     orm_adapter (0.4.0)
+    pamfaxr (0.0.3)
+      json
+      mime-types
     pg (0.14.1)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
@@ -196,7 +202,12 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  json
+  mime-types
   omniauth-taskrabbit
+  ordr.in-cli
+  ordrin
+  pamfaxr
   pg
   quiet_assets
   rails (= 3.2.7)

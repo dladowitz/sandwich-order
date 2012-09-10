@@ -13,8 +13,8 @@ class Order < ActiveRecord::Base
              :subject => "What a glorious day for #{ordered_by}, a sandwich is on the way.",
              :text => "Holy crap, a #{sandwich_type} is being made right now just for you. I know, I know, I cant believe it either. \n
                                                                             \n
-                       We charged you $5.99 so the Fredlings can buy shoes. \n
-                       Thanks for supporting them.")  
+              We charged you $5.99 so the Fredlings can buy shoes. \n
+              Thanks for supporting them.")  
   end
   
  
