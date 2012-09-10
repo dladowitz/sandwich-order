@@ -11,10 +11,32 @@ class Order < ActiveRecord::Base
              :from => 'david_ladowitz@freds-famous-sandwiches.com',
              :to => 'david@ladowitz.com',
              :subject => "What a glorious day for #{ordered_by}, a sandwich is on the way.",
-             :text => "Holy crap, a #{sandwich_type} is being made right now just for you. I know, I know, I cant believe it either. \n
-                                                                            \n
-              We charged you $5.99 so the Fredlings can buy shoes. \n
-              Thanks for supporting them.")  
+             :text => "Holy crap, a #{sandwich_type} sandwich is being made right now just for you. I know, I know, I cant believe it either. \n
+\n
+We charged you $5.99 so the Fredlings can buy shoes. \n
+Thanks for supporting them.")  
+  end
+  
+  def send_fax(sandwich)
+    pamfaxr = PamFaxr.new :username => 'david@ladowitz.com', :password => 'L@dowitz12'
+    pamfaxr.create_fax_job
+    
+    # case sandwich
+    # when "BALT"
+    #  ppamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Balt.pdf')
+    # when "Tomcat"
+      pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Tomcat.pdf')
+    # else
+    #    pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Caprese.pdf')
+    #  end
+    
+    pamfaxr.add_recipient('+17605613451')
+    loop do
+      fax_state = pamfaxr.get_state
+      break if fax_state['FaxContainer']['state'] == 'ready_to_send'
+      sleep 5
+    end
+    pamfaxr.send_fax
   end
   
  
