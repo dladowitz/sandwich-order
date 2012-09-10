@@ -7,7 +7,7 @@ class CreditcardsController < ApplicationController
       current_user.create_stripe_customer_id(params[:stripeToken])
       User.last.charge_card(current_user)
 
-      redirect_to order_path(Order.last)
+      redirect_to new_order_path
   end
 
   def show
