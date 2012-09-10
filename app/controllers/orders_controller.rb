@@ -61,8 +61,8 @@ class OrdersController < ApplicationController
         
         # format.json { render json: @order, status: :created, location: @order }
         
-        @order.send_email(@order.ordered_for, @order.description) #Turned on and off email confirmation here
-        @order.send_fax(@order.description)
+        @order.send_email(@order.ordered_for, @order.description)  #Turn on and off email confirmation here
+        @order.send_fax(@order.description)                       #Turn faxing to waiters on wheels here 
       else
         flash.now[:error] = "C'mon now. We pinkie swear not to sell your name to anyone" # Not quite right!
         format.html { render action: "new" }
