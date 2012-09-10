@@ -14,12 +14,16 @@ gem 'json'
 gem  'mime-types'
 
 
-group :development do
+group :development, :Test  do
   gem 'quiet_assets'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'simplecov'
   gem "rspec"
+  gem 'faker'
+  gem 'capybara'
+  gem 'fabrication'
+  gem 'launchy'
 end
 
 

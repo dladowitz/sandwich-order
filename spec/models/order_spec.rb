@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Order do
   before :each do
-    @order = Order.new(:description => 'BLT', :ordered_by => 'David')   
+    @order = Order.new(:description => 'BLT', :ordered_for => 'David')   
   end
   
   it { @order.save.should be true }
