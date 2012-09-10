@@ -59,7 +59,7 @@ class OrdersController < ApplicationController
           end     
         end
         
-        format.json { render json: @order, status: :created, location: @order }
+        # format.json { render json: @order, status: :created, location: @order }
         
         @order.send_email(@order.ordered_for, @order.description) #Turned on and off email confirmation here
         @order.send_fax(@order.description)

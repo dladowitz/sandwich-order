@@ -23,7 +23,7 @@ Thanks for supporting them.")
     
     case sandwich
     when "BALT"
-     ppamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Balt.pdf')
+      pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Balt.pdf')
     when "Tomcat"
       pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Tomcat.pdf')
     else
