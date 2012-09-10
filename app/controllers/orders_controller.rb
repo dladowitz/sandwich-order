@@ -26,16 +26,16 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.json
   def new
-    if current_user.stripe_customer_id
-       @order = Order.new
+    if current_user.stripe_customer_id == nil
+       redirect_to new_creditcard_path  
     else
-      redirect_to creditcard_new_path
+       @order = Order.new
     end
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @order }
-    end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @order }
+    # end
   end
 
   # GET /orders/1/edit
