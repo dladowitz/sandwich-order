@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
         RestClient.post("https://api:key-903saomu7owoeibd0pur22m-ct109sw0"\
             "@api.mailgun.net/v2/senderbots.mailgun.org/messages",
              :from => 'david_ladowitz@freds-famous-sandwiches.com',
-             :to => 'david@ladowitz.com',
+             :to => 'david@ladowitz.com, make_sandwich@generalthings.com',
              :subject => "What a glorious day for #{ordered_by}, a sandwich is on the way.",
              :text => "Holy crap, a #{sandwich_type} sandwich is being made right now just for you. I know, I know, I cant believe it either. \n
 \n
