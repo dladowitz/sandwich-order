@@ -32,7 +32,7 @@ Thanks for supporting them.")
        pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Caprese.pdf')
     end
     
-    pamfaxr.add_recipient('+17605613451')
+    pamfaxr.add_recipient('+14154526640')
     loop do
       fax_state = pamfaxr.get_state
       break if fax_state['FaxContainer']['state'] == 'ready_to_send'
