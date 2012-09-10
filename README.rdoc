@@ -3,12 +3,12 @@
 This app allows you to put in a sandwich order.
 
 Highlights:
-1. It actually sends in an order to Waiters On Wheels. 
+- It actually sends in an order to Waiters On Wheels. 
 Currently it is just setup to put in orders to one sandwich shop. In the future is can be expanded to work with any restaurant in the Waiters on Wheels system. 
 (I tried to get the TaskRabbit API working, without success)
 
-2. It also takes a credit card number and can charge with Stripe. 
+- It also takes a credit card number and can charge with Stripe. 
 For the moment Stripe is setup in test mode so no real money will be deducted. 
 
-3. It sends an email confirmation using the Mailgun API. 
+- It sends an email confirmation using the Mailgun API. 
 
