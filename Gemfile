@@ -14,7 +14,7 @@ gem 'json'
 gem  'mime-types'
 
 
-group :development, :Test  do
+group :development, :test  do
   gem 'quiet_assets'
   gem 'sqlite3'
   gem 'rspec-rails'
