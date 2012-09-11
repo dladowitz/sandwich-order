@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
         RestClient.post("https://api:key-903saomu7owoeibd0pur22m-ct109sw0"\
             "@api.mailgun.net/v2/senderbots.mailgun.org/messages",
              :from => 'david_ladowitz@freds-famous-sandwiches.com',
-             :to => 'david@ladowitz.com, make_sandwich@generalthings.com',
+             :to => 'david@ladowitz.com',
              :subject => "What a glorious day for #{ordered_by}, a sandwich is on the way.",
              :text => "Holy crap, a #{sandwich_type} sandwich is being made right now just for you. I know, I know, I cant believe it either. \n
 \n
@@ -28,11 +28,13 @@ Thanks for supporting them.")
       pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Tomcat.pdf')
     when "Jessie"
       pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Jessie.pdf')
-    else
+    when "Caprese"
        pamfaxr.add_remote_file('http://freds-sandwiches.herokuapp.com/Caprese.pdf')
+    else
+      #do nothing. I think you need an else block in a case statement. 
     end
     
-    pamfaxr.add_recipient('+14154526640')
+    pamfaxr.add_recipient('+17605613451')
     loop do
       fax_state = pamfaxr.get_state
       break if fax_state['FaxContainer']['state'] == 'ready_to_send'

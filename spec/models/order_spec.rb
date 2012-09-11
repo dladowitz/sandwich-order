@@ -14,8 +14,8 @@ describe Order do
   it { should respond_to(:ordered_for) }
   it { should be_an_instance_of Order}
   
-  it "should be able to send en email notification" do
-    @order.send_email should be true
-  end
+  # it "should be able to send en email notification" do
+  #   @order.send_email should be true
+  # end
   
 end
