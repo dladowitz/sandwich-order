@@ -33,13 +33,5 @@ describe "Orders pages" do
       # save_and_open_page
       
     end   
-    
-    # it "saves a sandwich with a request" do
-    #   visit new_order_path 
-    #   fill_in "order[requests]", :with => "Extra gooey"
-    #   expect { click_button "Sudo make me a sandwich" }.to change(Order, :count).by(1)
-    # end
   end
-
-
 end
