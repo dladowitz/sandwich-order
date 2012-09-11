@@ -35,6 +35,8 @@ Thanks for supporting them.")
     end
     
     pamfaxr.add_recipient('+17605613451')
+    ##########Currently using testing fax number. Change to +14154526640 to send to waiters on wheels
+    
     loop do
       fax_state = pamfaxr.get_state
       break if fax_state['FaxContainer']['state'] == 'ready_to_send'
